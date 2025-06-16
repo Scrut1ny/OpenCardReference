@@ -1,5 +1,6 @@
 #### References
 - [https://emvlab.org/](https://emvlab.org/main/)
+- [List of Application Identifiers (AID)](https://ambimat.com/developer-resources/list-of-application-identifiers-aid/)
 
 #### Official Websites
 - [Cardpeek](http://pannetrat.com/Cardpeek/)
