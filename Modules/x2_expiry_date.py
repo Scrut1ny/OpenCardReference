@@ -1,3 +1,5 @@
+# Converts / calculates YY/MM into YY/MM/DD format; taking leap years into consideration. 
+
 import datetime
 import os
 import sys
