@@ -13,7 +13,7 @@
 - [List of Application Identifier (AID)](https://ambimat.com/developer-resources/list-of-application-identifiers-aid/)
 - [List of Application Technology Reference (ATR)](https://emv.cool/2020/12/23/Complete-list-of-ATRs/)
 
-#### Official Websites
+#### Official Software Tool Websites
 - [Cardpeek](http://pannetrat.com/Cardpeek/)
 - [JCOP Manager](http://infintuary.org/jcop_dl.php)
 - [DEFTUN MSR Software](https://deftun.com/pages/deftun-download-softwares)
