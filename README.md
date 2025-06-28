@@ -6,7 +6,7 @@
 - [Payment Card Tools](https://paymentcardtools.com/)
 - [neaPay](https://neapay.com/online-tools/index.html)
 
-#### Refences
+#### References
 - [EFTlab](https://www.eftlab.com/knowledge-base)
   - [Complete list of Application Identifiers (AID)](https://www.eftlab.com/knowledge-base/complete-list-of-application-identifiers-aid)
   - [Complete list of ATRs](https://www.eftlab.com/knowledge-base/complete-list-of-atrs)
