@@ -13,7 +13,7 @@
 - ISO 3166 (Country codes)
   - [ISO](https://www.iso.org/iso-3166-country-codes.html)
   - [IBAN](https://www.iban.com/country-codes)
-  - [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)
+  - [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes#Current_ISO_3166_country_codes)
 - ISO 4217 (Currency codes)
   - [ISO](https://www.iso.org/iso-4217-currency-codes.html)
   - [IBAN](https://www.iban.com/currency-codes)
