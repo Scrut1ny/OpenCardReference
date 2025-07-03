@@ -1,0 +1,104 @@
+Q1. What is BIN?
+
+It is known as Bank Identification Number (BIN). It is a 6-digit number e.g.: 431408.
+
+==================================================
+
+Q2. What is the meaning of VBV, NON VBV and MSC?
+
+VBV (Verified by Visa) – Extra level protection is added by Visa to protect the Card from fraud.
+
+Like DOB, password, Social Security Number and Mother’s name, etc. also sending OTP (one-time password) as extra security level to card owner mobile number to validate the transaction.
+
+NON VBV (Verified by Visa) –Handy to use. No need extra information as specified in VBV card while doing the transaction.
+
+Note it down (IMP)- Carders mainly buy and use NON VBV cards for carding.
+
+MSC (MasterCard Secure Code) – security level same as VBV card.
+
+==================================================
+
+Q3. What is AVS?
+
+Address Verification System (AVS) is a fraud prevention measure used by payment processors to verify the billing address provided by the cardholder during a transaction. The AVS system checks the numeric portion of the street address, the zip or postal code, and in some cases, the name of the cardholder. If the information matches, the transaction is approved, and if the information doesn't match, the transaction may be declined or flagged for review. AVS helps prevent fraudulent transactions by ensuring that the billing address provided by the cardholder matches the address on file with the card issuer.
+
+==================================================
+
+Q4. How to check credit card is live or dead?
+
+There are many sites available on the internet to verify credit card is live or dead, but they charge for it approx. $0.001 (price may vary). Also, 80% websites kill the credit card so never use it.
+
+There are tools also available on the internet to check the credit card status, but most of them are a backdoor or Trojan so prefer not to use it.
+
+As such there is no easy method to check it. Carder uses own ways to find it out. One of the ways is…
+
+Most carder go to Porn sites, buy a membership and confirm the credit card is live and proceed with carding.
+
+==================================================
+
+Q5. How to check the credit card is live or dead? (Skype Method)
+
+(Note: method is posted on March 16)
+
+Login into Skype account and call on Magic number +18005xx5633 (masked). You will connect to voice mail (lady’s voice). Start by entering the credit card number, and voice mail lady will stop automatically.
+
+After that enter Expiry date of a card like 01 16 (mm: yy format).
+
+If your credit card is live then voice mail lady will speak like “Thank you for calling, we really appreciate your business, since u are a 1st-time caller we would like to connect you .. blah blah” then just hang the call.
+
+But if the credit card is used and voice mail lady speak like “Ohh I’m sorry please re-enter your credit card number now” then the card is dead. You can repeat the same process as many time you want.
+
+Note: You need a good internet connection for Skype calls.
+
+==================================================
+
+Q6. What is Bill=ship/Bill=CC/Ship=your Address?
+
+Kindly pay attention here as it is also the main portion in carding process. Any mistake will cancel the order and id get blocked.
+
+BILL=SHIP (Billing address: Shipping address)
+
+Take a scenario of normal online shopping scenario, when you are doing carding you will use billing address and shipping address are same. Means in both u will use your address. No need to use credit card address.
+
+Bill=Shipping address, Ship=your address
+
+When you are doing carding, you will use credit card holder address as your billing address, and shipping address will be your address. Most sites use this method.
+
+==================================================
+
+Acronyms
+
+3D-Secure: Three-Domain Secure
+APR: Annual Percentage Rate
+ATM: Automated Teller Machine
+BIN: Bank Identification Number
+BTC: Bitcoin
+CC: Credit Card
+CCN: Credit Card Number
+COB: Change of Billing
+CVV/CVV2: Credit Verification Value (Card Security Code)
+CVV: Card Verification Value
+DDA: Dynamic Data Authentication
+DOB: Date Of Birth
+EBT: Electronic Benefits Transfer
+EMV: Europay, Mastercard, and Visa
+FICO: Fair Isaac Corporation
+HCE: Host Card Emulation
+MCC: Merchant Category Code
+MCSC: MasterCard Secure Code
+MMN: Mother Maiden Name
+NFC: Near Field Communication
+PAN: Primary Account Number
+PCI DSS: Payment Card Industry Data Security Standard
+PCI PTS: Payment Card Industry PIN Transaction Security
+PIN: Personal Identification Number
+POS: Point of Sale
+RFID: Radio Frequency Identification
+SDA: Static Data Authentication
+SSN: Social Security Number
+VBV: Verified by Visa
+VPN: Virtual Private Network
+
+==================================================
+
+https://resources.infosecinstitute.com/topic/all-about-carding-for-noobs-only/

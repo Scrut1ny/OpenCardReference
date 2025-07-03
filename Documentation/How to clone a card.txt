@@ -1,0 +1,287 @@
+--- < MAIN STEPS > ---
+
+1. MSRX (R/W Magstripe)
+2. ATR (Write EMV chip)
+3. jcopenglish (Delete & Write EMV chip)
+4. Cardpeek (Check EMV chip info)
+5. X2 (Write EMV chip)
+6. ARQC_GEN (Generate valid ARQC tokens for X2)
+7. Cardpeek (Check EMV chip info)
+8. Write down pin (NOT on the blank), cashout @ local ATM
+
+* Make sure to set the "Effective Date" for the ARQC tokens the same date you're going to hit the ATM or make a transaction. *
+
+
+
+
+--- < MSRX > ---
+
+1. Open "MSRX.exe"
+
+2. Select the drop down menu for "Connect Device" at the top right of the software and select "HID".
+
+3. Select Hi-Co option for the card ISO data, if not selected already.
+
+4. Erase Track 1, 2, and 3.
+
+5. Swipe your selected card through your MSR605X, and verify if theres data on it.
+
+6. Using a dump you already have fill in Track 1 & 2, then select "Write".
+
+7. Swipe your card through the MSR605X, after then click "Read" and verify the info is correct that you just wrote to the card.
+
+
+
+
+--- < ATR Set & Activation (ATR) > ----
+
+You use this tool to change the ATR of the card so its the "banks" card, not a blank jave card.
+
+1. Open "ATRTool2.0.exe"
+
+2. Insert your “J2A040 Java JCOP Card” into your smart card R/W. (ex.: OMNIKEY)
+
+3. Select the drop down menu for "Reader:" and choose the OMNIKEY.
+
+4. Select the drop down menu for "JaveCard:" and choose "NXP JCOP J2A040".
+
+5. Click "Select ATR" option and choose the bank that corresponds with the BIN. (https://bincheck.io/bin-checker)
+	- Or click "CustomizeATR" option and input the ATR code that corresponds with the bank. (https://emv.cool/2020/12/23/Complete-list-of-ATRs/)
+
+6. Click "Set"
+
+
+
+
+--- < FORMAT THE CARD (jcopenglish) > ----
+
+- EZ Way; just click the little man with a bazooka.
+
+1. Open "jcopenglish.exe", and insert your “J2A040 Java JCOP Card” into your smart card R/W. (ex.: OMNIKEY)
+
+2. Paste Track2 into "Track Number:" input field. (Should then automatically select 1 of the 4 "Script Type") if not, select the correct script type for your card.
+
+3. Click "Delete Jcop files", than wait for the blue LED on your OMNIKEY to turn off.
+
+4. Click "Format Jcop chip", than wait for the blue LED on your OMNIKEY to turn off.
+
+5. Click "Save Track Jcop chip"; than wait for the blue LED on your OMNIKEY to turn off.
+
+6. Open "jcopmgr.exe" and check if your Jcop cards are unfused.
+
+
+
+
+--- < CHECK CARD DATA (cardpeek) > ----
+
+1. Open "cardpeek.exe", and insert your “J2A040 Java JCOP Card” into your smart card R/W. (ex.: OMNIKEY)
+
+2. Select your OMNIKEY for the "Select a card reader to use" drop down menu.
+
+3. Click "Analyzer" drop down menu, and select "EMV" option.
+
+4. When the popup "Issue a GET PROCESSING..." pops up select "Yes"
+
+5. Wait for chip to get scanned fully until information pops up. Verify if the information looks correct, if you see "Java" you messed up the process.
+
+
+
+
+--- < EMV Tutorial (X2) > ---
+
+1. Copy first 6 digits of "Track 2" (which is also on the physical card too "1234 12## #### ####) which is the BIN/IST (Bank Identification Number), then paste it in "https://bincheck.io/bin-checker". *Take note of information.*
+
+2. Open "X2 Smartcard Allinone" software, go to "EMV" section.
+
+3. Paste in "Track 2" to the "Track2" blank input space. *Make sure to add extra 0s at the end to fill in the input space completely! There should be a total of 37 characters. *
+
+4. Check the box "Erase Holdername" (The card holders name)
+
+5. Select input field for "Application Label (10 Letters)", and enter the "Card Brand" + "Card Level" from "https://bincheck.io/bin-checker" from step #1. (ex.: VISA DEBIT)
+
+6. Check box "Track 1 Direction Data", and remove anything that pops up. Make sure its blank, then ADD 1 space.
+
+7. Below in the "CREDIT" selection area select whatever corresponded to step #5 Label. (Options: MASTERCARD, VISA, & AMEX Buy Plugin)
+
+8. Then to the right, in "WRITER" selection area, check the box of the smart card R/W you have bought. (Options: OMNIKEY, MCR 200, & ACR 38)
+
+9. Then to the right, check the box "Change Data" for "Expiration Date" and input the first 4 digits of the second part (after the "=") of "Track2" data which is part of the expiration date, then for the last 2 digits enter how many days are in that month. (ex. 260228, 26=year 02=month 28=day) *Take account of the possibility of leap years*
+
+10. Optional: Then above, check the box "Effective Date" and input what you did for step #9, except remove 4 years from the expiration year. (ex.: 220228) OR make it the date you're going to cashout on.
+
+11. Then to the top right of the sotware select "Country code" and input the cards country code. (ex.: 0840) (Actual USA country code is "840" but you have to add the "0' for the coding)
+
+12. Then select "Currency" option and input the cards currency number (ex.: 0840)
+
+13. Then select "AID" option and input the cards "AID" (ex.: 31010 = VISA & 41010 = MASTERCARD)
+
+14. Then select "PIN" option and input the cards pin number. (ex.: 3829)
+
+15. Finally, click the "CREDIT" button at the bottom of the software next to "NFC" button. Wait till your OMNIKEY blinks and "Completed Job!" pops up in the software.
+
+--- < IST LOAD Tutorial > ---
+
+
+
+
+
+
+
+--- < Generate Valid ARQC codes (arqc_gen) > ---
+
+Pan (Card number)
+???? ???? ???? ???? - This is the cards PAN.
+
+Master derivation key (Authorization Cryptograms)
+0123456789ABCDEFFEDCBA9876543210
+
+Amount Authorized
+000000001000
+
+Amount Other
+000000000000
+
+Country Code
+USA-0840
+
+TVR
+0000000000
+
+Currency Code
+USD-0840
+
+Date(YYMMDD)
+?????? - YYMMDD of when you're going to make the transaction!!!
+
+Type
+00
+
+UN
+30901B6A
+
+(AIP):ICC
+3C00
+
+(ATC):ICC
+0001        = ARQC code 1
+0002        = ARQC code 2
+0003        = ARQC code 3
+etc...
+
+(IAD):ICC
+03A4A082
+
+PAD
+800000
+
+
+
+
+--- < Generate Valid ARQC codes (BP-Tools) > ---
+
+1. Open "BP-Tools.exe"
+
+2. EMV > Application Cryptograms > EMV v4.2
+
+3. Select "UDK" tab
+
+MDK (Master Decyption Key): 0123456789ABCDEF0123456789ABCDEF
+PAN: ???? ???? ???? ???? - This is the cards PAN.
+PAN seq. nv: 00
+
+4. Click on green lock once
+
+5. Select "Common Session Key" tab
+
+6. Click on green lock once
+
+7. Select "AAC/ARQC/TC" tab
+
+8. Click Green lock once
+
+9. Your ARQC code is on the bottom right; where it says "AC generated:"
+
+10. Go back to "Common Session Key" tab, and change the "ATC:" from "0001" to "0002" and go from there.
+
+
+
+
+--- < IST Generate > ---
+
+#1. Open the X2 2020 and click on the “IST Generate” option (top left).
+
+#2. Click on the “Read Card” button (middle bottom).
+
+#3. From the details that appear on the screen “Copy Track 2 Data.”
+
+#4. Click on the “EMV” option (located top left).
+
+#5. Paste that “Track 2” data and replace “D” located in the middle of “Track 2” with “=”
+
+#6. Insert “Card Holders Name” in its field it should be in “LAST NAME FIRST NAME” format (insert capital letters).
+
+#7. In “Application Label Field” insert “Card type” in our case it’s “VISA DEBIT” (insert capital letters).
+
+#8. In “Track 1 Discretion Data” you checkmark the box first then delete the “Default Value” that gets generated, then click on the “IST Generate” tab to copy “Track 1” then go back to the “EMV” tab and insert “Track 1” in its field there.
+
+#9. In the “Credit” field select your card type select “VISA” as our card was VISA (make sure to check track 1 again as changing the value in this section will replace Track 1 with a default value, so if that happens just replace that default value with Track 1 again) and in “Writer” field is “MCR200” as our hardware is MCR200.
+
+#10. In “AID” for “VISA” it’s “31010” for master it’s going to be “41010” so we typed “31010”
+
+#11. In “Country Code” insert your country code, ours is “0840” for the US.
+
+#12. In the “PIN” box insert your “Card/Dump Pin”
+
+#13. In “Currency Code” insert your “Card/Dump Currency Code” for USD its “0840”
+
+#14. In the “ARQC” section just “ignore that” for now.
+
+#15. For “Pref Name” we can leave that “as it is” for now.
+
+#16. For “Effective Date” click on the “Change Data” checkmark and then see the “Expiry Date” and Reverse it 4 years so for example if the expiry date of the card/dump is 28/02/2022 the “Effective Date” AKA Issue Date would be 28/02/2018 and you will insert it in “YYMMDD” format like “180228” inside “Effective Date”
+
+#17. For “Expiration Date” check the “IST Generate” tab and then see the “Expiry Date” on that page for example if the expiry date of the card/dump is 28/02/2022 you will go back to the “EMV tab” and insert it in “YYMMDD” format like “220228”
+
+#18. Now take out the “Original Donor Card” and insert the “Java White Card” to clone in your “MCR200” hardware.
+
+#19. Now it’s time to burn the “White Java Card” by clicking on the “Credit” button located at the bottom right.
+
+#20. You will see once you click “Credit” the “MCR200” will start writing and once done it will say “Completed Job.”
+
+#21. Leave everything as it is!
+
+——— CONGRATS HALF OF THE WORK IS DONE! ———
+
+#22. Click on the “IST Generate” tab and then click on the “Read Card” button at the bottom.
+
+#23. You must see the same data as you did when you inserted the “Original Donor Card” and clicked on “Read Card” in “Step 1 and 2” and if you see the same info then congrats, let’s get to the next step.
+
+#24. Now go to the “IST Generate” tab you see on top and click on the “Save” button that you see top right beside the “load” button, it will ask you to save that file with the “ZLD” extension so save it at the desktop with whatever name you like, Now you will click on “load” button and browse this file that you just saved with “ZLD” extension and it will say “Successfully Loaded Tree data from a file.”
+
+#25. Now on the same “IST Generate” page, it’s time to click on the “Generate IST” button that you see at the bottom and save that with whatever name, it will save with extension “IST” we will need this file later in step “35 below”.
+
+#26. Now go to “EMV tab” and copy “Track 2” then go back in “IST Load” and paste that “Track 2” in there, you do NOT need to fill in any other details on this page.
+
+#27. Now you will open “BP tools Cryptographic Calculator”
+
+#28. In the top tabs of this “Bp Tools Cryptographic Calculator,” you will see the “EMV” tab click on it and select “Application Cryptograms” then select “EMV 4.2” and you will see you will end up on a screen with “UDK” tab selected.
+
+#29. Now you will see options boxes for “MDK” “PAN” and “PAN Seq Nr” you will also see “UDK Derivation Option” with “Option A” and “Key Parity” with “Odd” Selected.
+
+#30. The only thing you need to change on this screen is “PAN” which obviously stands for “Primary Account Number” and you will get that from your “Track 2” so see the first 16 digit number that is also the “16 Digit Card Number.”
+
+#31. Go back to X2 2020 and in the “EMV tab” you will see the “first 16 digits of the card number” copy them and now go to the “BP tools calculator” to replace the default PAN number with “Your own PAN number” leave everything as default.
+
+#32. Now you will click on the “Green Padlock” and you will see that will add “MDK” and “UDK” inside the “output screen” on the right side.
+
+#33. Then you will click on the next tab called “Common Session Key” and without changing anything “Click the padlock” this will add more data such as “Common Session Key Derivation” and other keys in our “Output Screen”
+
+#34. Then click on the second last tab called “AAC/ARQC/TC” and hit the “Green Padlock” now this is the last step to get what we are looking for see the bottom of your “Output Screen” and you will see the “AC Generated Number” and that’s the ARQC we are looking for, so copy that number and close this “BP tool” as all the work for this is done.
+
+#35. Go back to X2 2020 in the “IST Load” tab and paste that “Ac Generated Number” from BP tools inside the “ARQC 1” box, now its time to browse the file that you saved with the “IST” extension in “Step 25” above by clicking the “Open” button.
+
+#36. Once you have the “IST File Path” + Track 2 + ARQC 1″ on this page it’s time to click on the “Burn” button.
+
+#37. Once you have done everything right you will see the “Completed Job” popup.
+
+#38. The “Java White Card” is now written and ready to go!

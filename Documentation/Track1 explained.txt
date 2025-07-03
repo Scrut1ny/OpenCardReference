@@ -1,0 +1,23 @@
+Example Track 1: %B1234567890123456^SMITH/JOHN^2206123456789012345?
+
+Full Track 1 Explanation:
+
+% = Start Sentinel: The unique character "%" indicates the beginning of the track.
+
+B = Format Code: The single character "B" specifies the format of the track as Track 1.
+
+1-6 = Primary Account Number (PAN): The first 6 digits "123456" represent the Bank Identification Number (BIN), and the remaining digits "7890123456" represent the cardholder's account number.
+
+7 = Separator: The "^" character separates the different data fields.
+
+8-26 = Cardholder Name: The cardholder's name is "SMITH/JOHN", with a maximum length of 26 characters. The name is separated by a "/" character.
+
+27 = Separator: Another "^" character separates the name field from the next field.
+
+28-33 = Expiration Date: The date on which the card expires is "2206", representing the year 2022 and month 06.
+
+? = End Sentinel: The "?" character indicates the end of the track.
+
+
+
+Together, this Track 1 data contains all the information needed to authorize transactions and verify the cardholder's identity. It can be read by ATM machines and point-of-sale (POS) terminals to process credit or debit card transactions.

@@ -1,0 +1,62 @@
+CC = 4266 8413 6497 9405
+
+    4        = The first digit of the credit card number is the Major Industry Identifier (MII), which identifies the category of the 
+	         card issuer. In this case, the MII is 4, which indicates that the card was issued by a banking and financial institution.
+			   
+    2668     = The first six digits of the credit card number are the Issuer Identification Number (IIN), which identifies the specific 
+	         card issuer. The IIN is also known as the Bank Identification Number (BIN) or the Prefix. In this example, the IIN is 2668, which is assigned to Wells Fargo Bank.
+			   
+    413      = The next one to six digits (depending on the card issuer) are the Account Number. This is the unique number assigned to
+               the cardholder's account. In this example, the Account Number is 413.
+			   
+    64979405 = The remaining digits are the Cardholder Account Number, which identifies the specific cardholder's account. This number 
+	         can vary in length depending on the card issuer, but is typically 10-12 digits long. In this example, the Cardholder Account Number is 6497 9405.
+
+It's important to note that credit card numbers can vary in length and structure depending on the card issuer and the type of 
+card (e.g. Visa, Mastercard, American Express, etc.). The above explanation is just one example of a credit card number.
+
+Credit card numbers, also known as Primary Account Numbers (PAN), typically have 16 digits. Each of these digits has a specific
+meaning that helps identify the card issuer and the account information. Here is an explanation of each digit:
+
+- The first digit identifies the major industry identifier (MII). This can help identify the type of institution that issued the card.
+  For example, a digit of 1 or 2 indicates that the card was issued by an airline or other industry, while a digit of 3 or 4 indicates 
+  that it was issued by a financial institution.
+  
++-----------------+-----------------------------------+
+| MII Digit Value | Issuer Category                   |
++-----------------+-----------------------------------+
+| 0               | ISO/TC 68 and other industry      |
+| 1               | Airlines                          |
+| 2               | Airlines and other industry       |
+| 3               | Travel and entertainment          |
+| 4               | Banking and financial (VISA)      |
+| 5               | Banking and financial (MASTERCARD)|
+| 6               | Merchandising and banking         |
+| 7               | Petroleum and other industry      |
+| 8               | Healthcare and telecommunications |
+| 9               | National assignment               |
++-----------------+-----------------------------------+
+
+- The next five to six digits represent the issuer identification number (IIN) or bank identification number (BIN). This identifies the 
+  financial institution that issued the card, such as a bank or credit union.
+
+- The seventh to twelfth digit is the account number. This unique number is assigned by the issuer and identifies the specific account associated with the card.
+
+- The thirteenth digit is the check digit. It is used to verify the validity of the credit card number using a mathematical algorithm
+  called the Luhn algorithm. This helps ensure that the credit card number is valid and not a random sequence of digits.
+
+- The last three to four digits are the card verification value (CVV) or card security code (CSC). These are typically located on the 
+  back of the card and are used as an additional layer of security to prevent fraud. The CVV or CSC is not stored on the magnetic 
+  stripe or chip of the card and is only printed on the card itself.
+
+===================================================
+
+Credit/Debit beginning CCNs - identify card issuers
+
+Visa credit: 4
+Mastercard: 51,52,53, or 54
+American Express: 34 or 37
+JCB: 34 or 37
+Discovery: 34 or 37
+
+===================================================

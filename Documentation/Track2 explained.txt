@@ -1,0 +1,21 @@
+Example Track 2: ;1234567890123456=220612345678901?
+
+Full Track 2 Explanation:
+
+; = Start Sentinel: The unique character ";" indicates the beginning of the track.
+
+1-6 = Primary Account Number (PAN): The first 6 digits "123456" represent the Bank Identification Number (BIN), and the remaining digits "7890123456" represent the cardholder's account number.
+
+= = Separator: The "=" character separates the PAN from the expiration date.
+
+8-13 = Expiration Date: The date on which the card expires is "2206", representing the year 2022 and month 06.
+
+14-19 = Service Code: The Service Code is a 3-digit code that represents additional information about the card. For example, "567" might indicate that the card can be used for international transactions.
+
+20-24 = Discretionary Data: This field contains additional data that may be specific to the card issuer or the cardholder.
+
+? = End Sentinel: The "?" character indicates the end of the track.
+
+
+
+Together, this Track 2 data contains all the information needed to authorize transactions and verify the cardholder's identity. It can be read by ATM machines and point-of-sale (POS) terminals to process credit or debit card transactions.

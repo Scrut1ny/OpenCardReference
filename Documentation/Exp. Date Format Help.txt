@@ -1,0 +1,22 @@
+Leap years occur once every four years to keep the calendar year synchronized with the astronomical year.
+
+Ex.: 2016, 2020, 2024, 2028, 2032, 2036, 2040, 2044, 2048, etc...
+
+260228 = 26=year 02=month 28=day    *Check for possible leap years!*
+
+==================================
+Month # | Month Name | Maximum Day
+--------|------------|------------
+01      | January    | 31
+02      | February   | 28 / 29
+03      | March      | 31
+04      | April      | 30
+05      | May        | 31
+06      | June       | 30
+07      | July       | 31
+08      | August     | 31
+09      | September  | 30
+10      | October    | 31
+11      | November   | 30
+12      | December   | 31
+==================================

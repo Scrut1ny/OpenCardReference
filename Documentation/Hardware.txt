@@ -1,0 +1,9 @@
+DEFTUN - Magnetic Stripe R/W Tool:
+MSR605X          - https://www.amazon.com/dp/B07FY6KH1X - ~$95
+MSRX6(BT)        - https://www.amazon.com/dp/B0105YP5NW - ~$195
+
+HID Global - EMV Chip R/W Tool:
+OMNIKEY 3021     - https://www.amazon.com/dp/B003BKV44C - ~$13
+
+smartelf - Blank Cards (Magnetic Stripe + EMV Chip):
+NXP JCOP J2A040  - https://www.amazon.com/dp/B0784QN85F
