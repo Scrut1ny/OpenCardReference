@@ -8,16 +8,11 @@
 
 #### References
 - [EFTlab](https://www.eftlab.com/knowledge-base)
-  - [Complete list of Application Identifiers (AID)](https://www.eftlab.com/knowledge-base/complete-list-of-application-identifiers-aid)
-  - [Complete list of ATRs](https://www.eftlab.com/knowledge-base/complete-list-of-atrs)
+  - [Complete list of Application Identifiers (AID)](https://www.eftlab.com/knowledge-base/complete-list-of-application-identifiers-aid) - [Complete list of ATRs](https://www.eftlab.com/knowledge-base/complete-list-of-atrs)
 - ISO 3166 (Country codes)
-  - [ISO](https://www.iso.org/iso-3166-country-codes.html)
-  - [IBAN](https://www.iban.com/country-codes)
-  - [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes#Current_ISO_3166_country_codes)
+  - [ISO](https://www.iso.org/iso-3166-country-codes.html) - [IBAN](https://www.iban.com/country-codes) - [Wikipedia](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes#Current_ISO_3166_country_codes)
 - ISO 4217 (Currency codes)
-  - [ISO](https://www.iso.org/iso-4217-currency-codes.html)
-  - [IBAN](https://www.iban.com/currency-codes)
-  - [Wikipedia](https://en.wikipedia.org/wiki/ISO_4217#Active_codes_(list_one))
+  - [ISO](https://www.iso.org/iso-4217-currency-codes.html) - [IBAN](https://www.iban.com/currency-codes) - [Wikipedia](https://en.wikipedia.org/wiki/ISO_4217#Active_codes_(list_one))
 
 #### Official Software Tool Websites
 - [Cardpeek](http://pannetrat.com/Cardpeek/)
