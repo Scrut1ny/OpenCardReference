@@ -17,5 +17,8 @@
 
 #### Official Software Tool Websites
 - [Cardpeek](http://pannetrat.com/Cardpeek/)
+  - [Direct Download](http://downloads.pannetrat.com/install/cardpeek-0.8.4-win32-setup.exe)
 - [JCOP Manager](http://infintuary.org/jcop_dl.php)
+  - [Direct Download](http://infintuary.org/downloads/jcopmgr.exe)
 - [DEFTUN MSR Software](https://deftun.com/pages/deftun-download-softwares)
+  - [Direct Download]()
